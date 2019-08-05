@@ -18,6 +18,7 @@ class TodoForm extends React.Component {
       console.log('clicked')
       event.preventDefault();
       this.props.addTask(this.state.task);
+      this.setState({task:""})
 
   }
 
