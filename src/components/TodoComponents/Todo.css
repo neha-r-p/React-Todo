@@ -1,7 +1,12 @@
 
 .task {
     font-weight: bolder;
+    text-align: center;
     width: 200px;
     padding:10px;
     border: 1px black solid;
+}
+
+.task.completed {
+    text-decoration: line-through;
 }

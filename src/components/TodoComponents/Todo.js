@@ -4,7 +4,7 @@ const Todo = props => {
     console.log(props.task)
 
     return (
-        <div className="task">
+        <div className={`task${props.task.completed ? ' completed' : ''}`} >
             <p>{props.task.task}</p>
         </div>
     )
