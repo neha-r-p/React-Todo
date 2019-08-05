@@ -1,4 +1,14 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+
+import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
+
+const TaskArray = [{
+  task: 'slept',
+  completed: false,
+  id: 123,
+}]
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -7,15 +17,18 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      task: '',
-      id: Date.now(),
-      completed: false,
+      todoList: TaskArray
     }
   }
+
+
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
+        <TodoList todoTask={this.state.todoList} />
+        <TodoForm />
       </div>
     );
   }
