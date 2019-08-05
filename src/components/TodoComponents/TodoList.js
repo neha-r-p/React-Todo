@@ -8,7 +8,7 @@ const TodoList = props => {
         <div>
             I exist
         {props.todoList.map(task => (
-            <Todo />
+            <Todo key={task.id} task={task}   />
         ))
         }
         </div>

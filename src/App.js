@@ -8,6 +8,11 @@ const TaskArray = [{
   task: 'slept',
   completed: false,
   id: 123,
+},
+{
+  task: 'ate',
+  completed: false,
+  id: 456,
 }]
 
 class App extends React.Component {
