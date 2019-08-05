@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import './components/TodoComponents/Todo.css'
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
+import { isTemplateElement } from "@babel/types";
 
 const taskArray = [
   {
@@ -29,7 +30,17 @@ class App extends React.Component {
   }
 
   toggleTask = id => {
-    this.setState()
+    this.setState({
+      todoList: this.state.todoList.map(task => {
+        if (task.id === id) {
+          return {
+            ...task, completed: !task.completed
+          }
+        } else {
+          return task
+        }
+      })
+    })
   }
 
   addTask = taskName => {
