@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './components/TodoComponents/Todo.css'
+import "./components/TodoComponents/Todo.css";
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
 import { isTemplateElement } from "@babel/types";
@@ -34,14 +34,15 @@ class App extends React.Component {
       todoList: this.state.todoList.map(task => {
         if (task.id === id) {
           return {
-            ...task, completed: !task.completed
-          }
+            ...task,
+            completed: !task.completed
+          };
         } else {
-          return task
+          return task;
         }
       })
-    })
-  }
+    });
+  };
 
   addTask = taskName => {
     const newTask = {
@@ -54,12 +55,18 @@ class App extends React.Component {
     });
   };
 
+  clearCompleted = () => {
+    this.setState({
+      todoList: this.state.todoList.filter(task => !task.completed)
+    });
+  };
+
   render() {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
         <TodoList todoList={this.state.todoList} toggleTask={this.toggleTask} />
-        <TodoForm addTask={this.addTask} />
+        <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted} />
       </div>
     );
   }
