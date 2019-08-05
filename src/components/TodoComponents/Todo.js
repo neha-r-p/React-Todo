@@ -4,7 +4,7 @@ const Todo = props => {
     console.log(props.task)
 
     return (
-        <div>
+        <div className="task">
             <p>{props.task.task}</p>
         </div>
     )

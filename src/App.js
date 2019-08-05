@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import './components/TodoComponents/Todo.css'
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
 
@@ -25,7 +25,11 @@ class App extends React.Component {
     super();
     this.state = {
       todoList: taskArray
-    }
+    };
+  }
+
+  toggleTask = id => {
+    this.setState()
   }
 
   addTask = taskName => {
@@ -43,7 +47,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todoList={this.state.todoList} />
+        <TodoList todoList={this.state.todoList} toggleTask={this.toggleTask} />
         <TodoForm addTask={this.addTask} />
       </div>
     );
