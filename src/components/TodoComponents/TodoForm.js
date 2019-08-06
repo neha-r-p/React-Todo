@@ -1,10 +1,11 @@
 import React from "react";
+import './Todo.css';
 
 class TodoForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      task: ''
+      task: ""
     };
   }
 
@@ -15,16 +16,15 @@ class TodoForm extends React.Component {
   };
 
   submitHandler = event => {
-      console.log('clicked')
-      event.preventDefault();
-      this.props.addTask(this.state.task);
-      this.setState({task:""})
-
-  }
+    console.log("clicked");
+    event.preventDefault();
+    this.props.addTask(this.state.task);
+    this.setState({ task: "" });
+  };
 
   render() {
     return (
-      <form onSubmit={this.submitHandler} >
+      <form onSubmit={this.submitHandler}>
         <input
           type="text"
           value={this.state.task}

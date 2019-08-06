@@ -1,8 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import "./components/TodoComponents/Todo.css";
 import TodoList from "./components/TodoComponents/TodoList";
 import TodoForm from "./components/TodoComponents/TodoForm";
+import './components/TodoComponents/Todo.css';
 
 const taskArray = [
   {
@@ -62,8 +63,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="App">
+        <h2 className="header">Todo List</h2>
         <TodoList todoList={this.state.todoList} toggleTask={this.toggleTask} />
         <TodoForm addTask={this.addTask} clearCompleted={this.clearCompleted} />
       </div>

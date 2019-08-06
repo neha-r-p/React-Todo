@@ -1,13 +1,51 @@
 
+.App {
+    width: 50%;
+    color: white;
+    margin: 0 auto;
+    background: #5c1f76;
+    border:1px solid black;
+    border-radius: 20px;
+}
+
+.header {
+    font-size: 40px;
+    text-align: center;
+}
+
 .task {
     font-weight: bolder;
+    background: lavender;
+    color: darkslategray;
     font-size: 20px;
     text-align: center;
-    width: 200px;
+    width: 60%;
     padding:10px;
-    border: 1px black solid;
+    margin:15px auto;
+    border-radius: 10px;
 }
 
 .task.completed {
     text-decoration: line-through;
+}
+
+form {
+    width: 60%;
+    margin: 20px auto 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form>input {
+    width: 160px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+form>button {
+    width: 75px;
+    height: 30px;
+    border-radius: 10px;
 }
