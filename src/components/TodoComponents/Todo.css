@@ -29,10 +29,15 @@
     text-decoration: line-through;
 }
 
-form {
-    width: 60%;
+.form-div {
+    width: 63%;
     margin: 20px auto 40px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +50,14 @@ form>input {
 }
 
 form>button {
-    width: 75px;
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.clear-btn {
+    width: 90px;
     height: 30px;
     border-radius: 10px;
 }
